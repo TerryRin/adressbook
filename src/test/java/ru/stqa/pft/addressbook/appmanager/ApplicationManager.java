@@ -29,7 +29,7 @@ public class ApplicationManager {
       driver = new InternetExplorerDriver();
     }
     driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/group.php");
     navigationHelper.groupHelper = new GroupHelper(driver);
     navigationHelper = new NavigationHelper(driver);
