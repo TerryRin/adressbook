@@ -12,3 +12,9 @@ dependencies {
 test {
     useTestNG()
 }
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile){
+        options.compilerArgs << "-Xlint:deprecation"
+    }
+}
